@@ -33,14 +33,14 @@ export function NewsList({ news }: { news: NewsItem[] }) {
             <Link
               key={item._id}
               href={`/news/${item.slug.current}`}
-              className="block py-6 transition-colors hover:bg-surface/50"
+              className="block rounded-xl px-3 py-6 transition-colors hover:bg-white"
             >
               <div className="flex items-center gap-3">
                 <time className="text-sm text-text-light">
                   {format(new Date(item.publishedAt), "yyyy.MM.dd")}
                 </time>
                 {item.category && (
-                  <span className="rounded bg-primary px-2 py-0.5 text-xs text-white">
+                  <span className="rounded-full border border-border bg-surface px-2.5 py-0.5 text-xs text-text-light">
                     {item.category}
                   </span>
                 )}

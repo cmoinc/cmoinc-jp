@@ -64,7 +64,7 @@ export function MemberGrid({ members }: { members: Member[] }) {
                 </p>
               )}
               {member.role && (
-                <p className="mt-1 text-sm text-accent">{member.role}</p>
+                <p className="mt-1 text-sm text-primary-light">{member.role}</p>
               )}
             </motion.div>
           ))}

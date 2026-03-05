@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | CMO株式会社",
   },
   description:
-    "CMO株式会社は、マーケティング・人材・テクノロジーの力で企業の成長を支援するプロフェッショナルファームです。",
+    "CMO株式会社は、デジタルを主戦場としながらマーケティング戦略を作る、ナレッジエキスパート集団です。DXとマーケティング、2つの領域で企業の成長を支援します。",
   openGraph: {
     type: "website",
     locale: "ja_JP",

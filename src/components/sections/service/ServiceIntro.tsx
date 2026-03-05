@@ -8,22 +8,34 @@ import { Button } from "@/components/ui/Button";
 
 const services = [
   {
-    title: "デジタルマーケティング",
+    title: "人材紹介 / キャリア支援",
     description:
-      "SEO対策、リスティング広告、SNS広告、コンテンツマーケティング、アクセス解析など、デジタル領域のマーケティング施策を総合的に支援します。",
-    features: ["SEO / SEM", "SNS広告運用", "コンテンツ戦略", "データ分析"],
+      "マーケターに特化した人材紹介とキャリア支援を提供。法人採用・個人転職の双方をサポートします。",
   },
   {
-    title: "人材ソリューション",
+    title: "フリーランス紹介",
     description:
-      "採用コンサルティング、人材紹介、組織開発、研修・教育プログラムなど、人材に関する課題をワンストップで解決します。",
-    features: ["採用コンサルティング", "人材紹介", "組織開発", "研修プログラム"],
+      "マーケティング領域に専門性を持つフリーランス人材を、業務委託などの形でスピーディにご紹介します。",
   },
   {
-    title: "テクノロジー",
+    title: "パートナー選定支援",
     description:
-      "Webシステム開発、アプリ開発、DX推進コンサルティング、データ基盤構築など、テクノロジーの力でビジネス変革を実現します。",
-    features: ["Web / アプリ開発", "DX推進", "データ基盤構築", "AI活用支援"],
+      "支援実績に基づき、企業に最適な広告代理店やSEOコンサルタントなどの外部パートナー選定を支援します。",
+  },
+  {
+    title: "広告運用改善",
+    description:
+      "業界トップクラスの知見を持つコンサルタントが広告アカウントを診断し、成果につながる運用体制を構築します。",
+  },
+  {
+    title: "サイト運用",
+    description:
+      "月額・管理不要でWebサイト運用を支援。コンテンツ制作と運用改善をセットで伴走します。",
+  },
+  {
+    title: "検索エンジン最適化",
+    description:
+      "検索エンジン流入を分析し、評価低下の要因を特定。継続的なSEO改善の打ち手を提示します。",
   },
 ];
 
@@ -31,7 +43,7 @@ export function ServiceIntro() {
   return (
     <Section>
       <Container>
-        <div className="space-y-12">
+        <div className="grid gap-6 md:grid-cols-2">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
@@ -40,21 +52,11 @@ export function ServiceIntro() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
             >
-              <Card className="p-8 md:p-10">
-                <h3 className="text-xl font-bold">{service.title}</h3>
+              <Card className="h-full p-7 md:p-8">
+                <h3 className="text-xl font-semibold">{service.title}</h3>
                 <p className="mt-3 leading-relaxed text-text-light">
                   {service.description}
                 </p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {service.features.map((feature) => (
-                    <span
-                      key={feature}
-                      className="rounded-full bg-surface px-3 py-1 text-xs font-medium text-text-light"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
               </Card>
             </motion.div>
           ))}

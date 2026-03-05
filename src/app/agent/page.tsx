@@ -11,8 +11,8 @@ export default function AgentPage() {
     <>
       <PageHero
         title="キャリア支援"
-        titleEn="Career Agent"
-        description="あなたのキャリアを、最適なステージへ。"
+        titleEn="Marketer's Career"
+        description="マーケターに特化した人材紹介エージェントとして、キャリア支援を行っています。"
       />
       <AgentContent />
     </>

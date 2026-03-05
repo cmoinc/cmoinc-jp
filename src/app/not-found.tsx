@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/Button";
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-[60vh] items-center bg-surface">
+    <div className="flex min-h-[60vh] items-center bg-surface pt-20 md:pt-24">
       <Container className="text-center">
-        <p className="font-display text-6xl font-bold text-accent">404</p>
+        <p className="font-display text-6xl font-semibold text-primary-light">404</p>
         <h1 className="mt-4 text-2xl font-bold">
           ページが見つかりません
         </h1>

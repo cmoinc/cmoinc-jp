@@ -16,15 +16,17 @@ export function SectionTitle({
   return (
     <div
       className={cn(
-        "mb-10 md:mb-14",
+        "mb-12 md:mb-16",
         align === "center" && "text-center",
         className
       )}
     >
-      <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-        {en}
-      </p>
-      <h2 className="mt-2 text-2xl font-bold md:text-3xl">{ja}</h2>
+      {en ? (
+        <p className="font-display text-xs font-semibold uppercase tracking-[0.22em] text-text-light">
+          {en}
+        </p>
+      ) : null}
+      <h2 className="mt-3 text-3xl font-semibold md:text-4xl">{ja}</h2>
     </div>
   );
 }

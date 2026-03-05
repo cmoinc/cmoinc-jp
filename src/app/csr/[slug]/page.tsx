@@ -51,7 +51,7 @@ export default async function CSRDetailPage({ params }: Props) {
             </div>
 
             {article.body && (
-              <div className="prose prose-gray max-w-none">
+              <div className="prose prose-gray max-w-none prose-headings:font-semibold">
                 <PortableText value={article.body} />
               </div>
             )}

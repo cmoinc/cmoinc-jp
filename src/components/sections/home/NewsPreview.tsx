@@ -22,7 +22,7 @@ export function NewsPreview({ news }: { news: NewsItem[] }) {
   return (
     <Section>
       <Container>
-        <SectionTitle en="News" ja="ニュース" />
+        <SectionTitle en="News" ja="ニュースリリース" />
 
         <div className="space-y-0 divide-y divide-border">
           {news.map((item, i) => (
@@ -35,14 +35,14 @@ export function NewsPreview({ news }: { news: NewsItem[] }) {
             >
               <Link
                 href={`/news/${item.slug.current}`}
-                className="flex flex-col gap-2 py-5 transition-colors hover:bg-surface/50 sm:flex-row sm:items-center sm:gap-6"
+                className="flex flex-col gap-2 rounded-xl px-3 py-5 transition-colors hover:bg-white sm:flex-row sm:items-center sm:gap-6"
               >
                 <div className="flex shrink-0 items-center gap-3">
                   <time className="text-sm text-text-light">
                     {format(new Date(item.publishedAt), "yyyy.MM.dd")}
                   </time>
                   {item.category && (
-                    <span className="rounded bg-primary px-2 py-0.5 text-xs text-white">
+                    <span className="rounded-full border border-border bg-surface px-2.5 py-0.5 text-xs text-text-light">
                       {item.category}
                     </span>
                   )}
@@ -57,6 +57,17 @@ export function NewsPreview({ news }: { news: NewsItem[] }) {
           <Button href="/news" variant="outline">
             ニュース一覧へ
           </Button>
+          <p className="mt-4 text-sm text-text-light">
+            ニュースレターは
+            <a
+              href="https://media.cmoinc.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-1 underline decoration-text-light/50 underline-offset-4 transition-colors hover:text-primary"
+            >
+              こちら
+            </a>
+          </p>
         </div>
       </Container>
     </Section>

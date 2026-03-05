@@ -3,21 +3,24 @@ import { Button } from "@/components/ui/Button";
 
 export function CTASection() {
   return (
-    <section className="bg-primary py-20 md:py-28">
-      <Container className="text-center">
-        <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-          Contact Us
-        </p>
-        <h2 className="mt-3 text-2xl font-bold text-white md:text-3xl">
-          お気軽にお問い合わせください
-        </h2>
-        <p className="mx-auto mt-4 max-w-lg text-white/70">
-          サービスに関するご質問、お見積もりのご依頼など、まずはお気軽にご連絡ください。
-        </p>
-        <div className="mt-8">
-          <Button href="/policy" size="lg">
-            お問い合わせ
-          </Button>
+    <section className="pb-24 md:pb-32">
+      <Container>
+        <div className="rounded-3xl border border-border/80 bg-white px-6 py-14 text-center md:px-12 md:py-16">
+          <p className="font-display text-xs font-semibold uppercase tracking-[0.22em] text-text-light">
+            Contact Us
+          </p>
+          <h2 className="mt-4 text-3xl font-semibold text-text md:text-4xl">
+            Marketer&apos;s company.
+          </h2>
+          <p className="mx-auto mt-5 max-w-lg text-text-light">
+            サービスのご相談、採用・キャリア支援に関するお問い合わせなど、
+            まずはお気軽にご連絡ください。
+          </p>
+          <div className="mt-8">
+            <Button href="/policy" size="lg">
+              お問い合わせ
+            </Button>
+          </div>
         </div>
       </Container>
     </section>

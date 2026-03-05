@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #1a1a2e;
-  --color-primary-light: #2d2d4a;
-  --color-accent: #e94560;
-  --color-accent-hover: #d13a54;
-  --color-surface: #f8f9fa;
-  --color-surface-dark: #e9ecef;
-  --color-text: #1a1a2e;
-  --color-text-light: #6c757d;
-  --color-text-inverse: #ffffff;
-  --color-border: #dee2e6;
+  --color-primary: #101828;
+  --color-primary-light: #1f2937;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-surface: #f2f4f7;
+  --color-surface-dark: #e4e8ef;
+  --color-text: #101828;
+  --color-text-light: #475467;
+  --color-text-inverse: #f8fafc;
+  --color-border: #d0d5dd;
+  --color-muted: #98a2b3;
+  --color-background: #f8fafc;
 
   --font-sans: var(--font-noto-sans-jp);
   --font-display: var(--font-raleway);
@@ -25,9 +27,24 @@
 body {
   font-family: var(--font-sans), sans-serif;
   color: var(--color-text);
-  background: #ffffff;
+  min-height: 100vh;
+  line-height: 1.65;
+  background:
+    radial-gradient(1200px 500px at 100% -20%, #e8eefc 0%, transparent 60%),
+    radial-gradient(900px 400px at -10% 100%, #edf1f7 0%, transparent 55%),
+    var(--color-background);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display), var(--font-sans), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-accent) 25%, white);
 }

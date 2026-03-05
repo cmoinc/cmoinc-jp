@@ -79,7 +79,7 @@ export function ServiceMenu() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08, duration: 0.4 }}
-                  className="rounded-lg border border-border p-6"
+                  className="rounded-2xl border border-border/80 bg-white p-6 shadow-[0_1px_2px_rgba(16,24,40,0.04)]"
                 >
                   <h4 className="font-bold">{item.name}</h4>
                   <p className="mt-2 text-sm leading-relaxed text-text-light">

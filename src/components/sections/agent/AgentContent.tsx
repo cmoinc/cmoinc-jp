@@ -78,7 +78,7 @@ export function AgentContent() {
                 transition={{ delay: i * 0.1, duration: 0.4 }}
                 className="flex gap-6"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent font-display text-lg font-bold text-white">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary font-display text-lg font-semibold text-text-inverse">
                   {item.step}
                 </div>
                 <div>

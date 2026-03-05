@@ -19,39 +19,42 @@ const footerLinks = [
     ],
   },
   {
-    title: "Recruit",
+    title: "Media",
     links: [
       { label: "採用情報", href: "/career" },
+      { label: "ニュースレター", href: "https://media.cmoinc.jp/" },
     ],
   },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-primary pt-16 pb-8 text-white/70">
+    <footer className="border-t border-border/80 bg-white pb-10 pt-16 text-text-light">
       <Container>
         <div className="grid gap-10 md:grid-cols-4">
           {/* Brand */}
           <div>
             <Link
               href="/"
-              className="font-display text-xl font-bold text-white"
+              className="font-display text-xl font-semibold text-text"
             >
               CMO Inc.
             </Link>
-            <p className="mt-3 text-sm leading-relaxed">
+            <p className="mt-3 text-sm leading-relaxed text-text-light">
               CMO株式会社
               <br />
-              マーケティング・人材・テクノロジーで
+              マーケティングの知見で
               <br />
               企業の成長を支援します。
+              <br />
+              info@cmoinc.jp / 03-5050-2639
             </p>
           </div>
 
           {/* Link columns */}
           {footerLinks.map((group) => (
             <div key={group.title}>
-              <p className="font-display text-xs font-semibold uppercase tracking-[0.15em] text-white">
+              <p className="font-display text-xs font-semibold uppercase tracking-[0.18em] text-text">
                 {group.title}
               </p>
               <ul className="mt-4 flex flex-col gap-3">
@@ -59,7 +62,9 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm transition-colors hover:text-white"
+                      target={link.href.startsWith("http") ? "_blank" : undefined}
+                      rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="text-sm transition-colors hover:text-primary"
                     >
                       {link.label}
                     </Link>
@@ -70,10 +75,10 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 md:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border/80 pt-8 md:flex-row">
           <Link
             href="/policy"
-            className="text-xs transition-colors hover:text-white"
+            className="text-xs transition-colors hover:text-primary"
           >
             プライバシーポリシー
           </Link>

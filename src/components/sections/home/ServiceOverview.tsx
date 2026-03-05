@@ -9,22 +9,19 @@ import { Button } from "@/components/ui/Button";
 
 const services = [
   {
-    icon: "📊",
-    title: "デジタルマーケティング",
+    title: "エージェンシー事業",
     description:
-      "データドリブンなマーケティング戦略の立案から実行まで。SEO、広告運用、コンテンツマーケティングを統合的に支援します。",
+      "企業のマーケティング戦略立案から実行までを一気通貫で支援。広告運用改善やSEO、パートナー選定まで伴走します。",
   },
   {
-    icon: "👥",
-    title: "人材ソリューション",
+    title: "キャリア支援事業",
     description:
-      "企業の成長に必要な人材の採用支援から組織開発まで。最適な人材戦略でビジネスを加速します。",
+      "マーケターに特化した人材紹介とキャリア支援を提供。法人の採用課題と個人のキャリア形成を同時に支援します。",
   },
   {
-    icon: "💻",
-    title: "テクノロジー",
+    title: "ナレッジサービス",
     description:
-      "最新のテクノロジーを活用したDX推進支援。システム開発からデータ活用まで、企業のデジタル変革を実現します。",
+      "「CMO Career」やニュースレターなど、実務知見を活かした情報発信とサービスを通じてマーケターの成長を支えます。",
   },
 ];
 
@@ -32,7 +29,7 @@ export function ServiceOverview() {
   return (
     <Section>
       <Container>
-        <SectionTitle en="Service" ja="事業内容" />
+        <SectionTitle en="Business" ja="事業紹介" />
 
         <div className="grid gap-8 md:grid-cols-3">
           {services.map((service, i) => (
@@ -43,9 +40,11 @@ export function ServiceOverview() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
             >
-              <Card className="h-full text-center">
-                <div className="mb-4 text-4xl">{service.icon}</div>
-                <h3 className="mb-3 text-lg font-bold">{service.title}</h3>
+              <Card className="h-full">
+                <div className="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-full bg-surface text-sm font-display font-semibold text-text-light">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <h3 className="mb-3 text-lg font-semibold">{service.title}</h3>
                 <p className="text-sm leading-relaxed text-text-light">
                   {service.description}
                 </p>

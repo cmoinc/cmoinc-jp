@@ -63,14 +63,14 @@ export default async function NewsDetailPage({ params }: Props) {
                 {format(new Date(article.publishedAt), "yyyy.MM.dd")}
               </time>
               {article.category && (
-                <span className="rounded bg-primary px-2 py-0.5 text-xs text-white">
+                <span className="rounded-full border border-border bg-surface px-2.5 py-0.5 text-xs text-text-light">
                   {article.category}
                 </span>
               )}
             </div>
 
             {article.body && (
-              <div className="prose prose-gray max-w-none">
+              <div className="prose prose-gray max-w-none prose-headings:font-semibold">
                 <PortableText value={article.body} />
               </div>
             )}

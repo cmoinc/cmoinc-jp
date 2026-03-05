@@ -32,9 +32,9 @@ export function HistoryTimeline() {
                 className="relative mb-8 last:mb-0"
               >
                 {/* Dot */}
-                <div className="absolute -left-[calc(2rem+5px)] top-1 h-3 w-3 rounded-full bg-accent" />
+                <div className="absolute -left-[calc(2rem+5px)] top-1 h-3 w-3 rounded-full bg-primary" />
 
-                <p className="font-display text-sm font-bold text-accent">
+                <p className="font-display text-sm font-semibold text-primary-light">
                   {item.year}
                 </p>
                 <p className="mt-1 text-sm text-text-light">{item.event}</p>

@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/sections/home/HeroSection";
+import { ClientVoices } from "@/components/sections/home/ClientVoices";
 import { ServiceOverview } from "@/components/sections/home/ServiceOverview";
 import { AboutPreview } from "@/components/sections/home/AboutPreview";
 import { NewsPreview } from "@/components/sections/home/NewsPreview";
@@ -11,6 +12,7 @@ export default async function Home() {
   return (
     <>
       <HeroSection />
+      <ClientVoices />
       <ServiceOverview />
       <AboutPreview />
       <NewsPreview news={latestNews} />

@@ -20,7 +20,7 @@ export function MobileMenu({ open, onClose, navItems }: MobileMenuProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-40 bg-black/50"
+            className="fixed inset-0 z-40 bg-black/35 backdrop-blur-[2px]"
           />
 
           {/* Slide-over panel */}
@@ -29,11 +29,11 @@ export function MobileMenu({ open, onClose, navItems }: MobileMenuProps) {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="fixed inset-y-0 right-0 z-50 w-80 bg-primary p-8"
+            className="fixed inset-y-0 right-0 z-50 w-80 border-l border-border bg-white p-8"
           >
             <button
               onClick={onClose}
-              className="mb-8 ml-auto flex h-10 w-10 items-center justify-center text-white"
+              className="mb-8 ml-auto flex h-10 w-10 items-center justify-center text-text"
               aria-label="メニューを閉じる"
             >
               <svg
@@ -54,7 +54,7 @@ export function MobileMenu({ open, onClose, navItems }: MobileMenuProps) {
                   key={item.href}
                   href={item.href}
                   onClick={onClose}
-                  className="text-lg font-medium text-white/80 transition-colors hover:text-white"
+                  className="text-lg font-medium text-text-light transition-colors hover:text-text"
                 >
                   {item.label}
                 </Link>
@@ -62,7 +62,7 @@ export function MobileMenu({ open, onClose, navItems }: MobileMenuProps) {
               <Link
                 href="/policy"
                 onClick={onClose}
-                className="mt-4 rounded-md bg-accent px-6 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+                className="mt-4 rounded-full border border-primary bg-primary px-6 py-3 text-center text-sm font-medium text-text-inverse transition-colors hover:bg-primary-light"
               >
                 お問い合わせ
               </Link>

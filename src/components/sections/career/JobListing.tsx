@@ -51,7 +51,7 @@ export function JobListing() {
                   <div>
                     <h3 className="text-lg font-bold">{job.title}</h3>
                     <div className="mt-2 flex gap-3">
-                      <span className="rounded bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent">
+                      <span className="rounded-full border border-border bg-surface px-2.5 py-0.5 text-xs font-medium text-text-light">
                         {job.type}
                       </span>
                       <span className="text-xs text-text-light">
